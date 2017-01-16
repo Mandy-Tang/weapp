@@ -1,2 +1,9 @@
 <!--pages/list/index.wxml-->
-<text>pages/list/index.wxml</text>
+<view wx:for="{{jobs}}" class="job-panel">
+  <view class="">
+    <view class="job-name">{{item.jobName}}</view>
+    <view class="job-address">address: {{item.address}}</view>
+    <view class="job-e-address">expected address: {{item.expectedAddress}}</view>
+    <view class="job-description">{{item.description}}</view>
+  </view>
+</view>

@@ -1,6 +1,6 @@
 /* pages/position/index.wxss */
 input, textarea, button {
-    margin: 20px;
+    margin: 40rpx;
     padding: 10rpx;
     border-radius: 8rpx;
     font-size: 32rpx;

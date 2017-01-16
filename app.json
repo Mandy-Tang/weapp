@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/list/index",
     "pages/position/index",
     "pages/explore/index",
     "pages/apply/index",
@@ -20,6 +21,12 @@
     "backgroundColor": "#f6f8f9",
     "borderStyle": "white",
     "list": [{
+      "pagePath": "pages/list/index",
+      "text": "Position",
+      "iconPath": "icons/home.png",
+      "selectedIconPath": "icons/home_green.png"
+    },
+    {
       "pagePath": "pages/position/index",
       "text": "Position",
       "iconPath": "icons/home.png",
