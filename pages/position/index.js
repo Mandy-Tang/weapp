@@ -1,6 +1,34 @@
 // pages/position/index.js
+const fields = [
+  {
+    name: 'jobName',
+    tag: 'input',
+    placeholder: 'Position Name'
+  },
+  {
+    name: 'address',
+    tag: 'input',
+    placeholder: 'Your Address'
+  },
+  {
+    name: 'expectedAddress',
+    tag: 'input',
+    placeholder: 'Prefferd Address'
+  },
+  {
+    name: 'description',
+    tag: 'textarea',
+    placeholder: 'Job Description'
+  }
+]
 Page({
-  data:{},
+  data:{
+    fields: fields
+  },
+  onSubmit: (e) => {
+    const value = e.detail.value;
+    console.log(value);
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },

@@ -1,1 +1,17 @@
 /* pages/position/index.wxss */
+input, textarea, button {
+    margin: 20px;
+    padding: 10rpx;
+    border-radius: 8rpx;
+    font-size: 32rpx;
+}
+input, textarea {
+    border: 0.1rpx solid lightgrey; 
+}
+button {
+    background: lightgray;
+}
+textarea {
+    width: auto;
+    height: 100rpx;
+}
