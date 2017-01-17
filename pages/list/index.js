@@ -1,5 +1,5 @@
 // pages/list/index.js
-import { getJobs } from '../../utils/jobs';
+import { getJobs, deleteJob } from '../../utils/jobs';
 const goToPositionPage = () => {
   // remain the current page and navigate to another page which is not in the tabBar
   wx.navigateTo({
@@ -14,7 +14,14 @@ const goToUpdateJob = (e) => {
 }
 
 const goToDeleteJob = (e) => {
-  deleteJob(e.target.dataset.id);
+  wx.showModal({
+    title: '确定删除内推职位',
+    success: function(res) {
+      if (res.confirm) {
+        deleteJob(e.target.dataset.id); 
+      }
+    }
+  })
 }
 
 Page({

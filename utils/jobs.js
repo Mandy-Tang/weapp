@@ -42,3 +42,10 @@ export const updateJob = (job) => (
     return writeJobs(jobs);
   })
 )
+
+export const deleteJob = (id) => (
+  readJobs().then((jobs) => {
+    delete jobs[id];
+    return writeJobs(jobs);
+  })
+)
