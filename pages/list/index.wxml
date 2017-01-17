@@ -7,10 +7,10 @@
     <view class="job-description">{{item.description}}</view>
     <view class="job-edit">
       <view class="job-edit__button">
-        <button type="primary">Edit</button>
+        <button type="primary" data-id="{{item.id}}" bindtap="goToUpdateJob">Edit</button>
       </view>
       <view class="job-edit__button">
-        <button type="default">Delete</button>
+        <button type="default" data-id="{{item.id}}" bindtap="goToDeleteJob">Delete</button>
       </view>
     </view>
   </view>

@@ -31,3 +31,14 @@ export const createJob = (job) => (
 export const getJobs = () => (
   readJobs().then((jobs) => Object.values(jobs))
 )
+
+export const getJob = (id) => (
+  readJobs().then((jobs) => (jobs[id])) 
+)
+
+export const updateJob = (job) => (
+  readJobs().then((jobs) => {
+    Object.assign(jobs[job.id], job);
+    return writeJobs(jobs);
+  })
+)

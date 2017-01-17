@@ -6,14 +6,27 @@ const goToPositionPage = () => {
     url: '../position/index' // relative path
   })
 }
+
+const goToUpdateJob = (e) => {
+  wx.navigateTo({
+    url: `../position/index?id=${e.target.dataset.id}`
+  })
+}
+
+const goToDeleteJob = (e) => {
+  deleteJob(e.target.dataset.id);
+}
+
 Page({
   data:{
     jobs: [],
   },
-  onLoad:function(options){
+  onLoad: function(options) {
     getJobs().then((jobs) => {
       this.setData({jobs})
     });
   },
-  goToPositionPage
+  goToPositionPage,
+  goToUpdateJob,
+  goToDeleteJob
 })
