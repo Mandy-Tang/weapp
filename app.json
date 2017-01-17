@@ -27,12 +27,6 @@
       "selectedIconPath": "icons/home_green.png"
     },
     {
-      "pagePath": "pages/position/index",
-      "text": "Position",
-      "iconPath": "icons/home.png",
-      "selectedIconPath": "icons/home_green.png"
-    },
-    {
       "pagePath": "pages/explore/index",
       "text": "Explore",
       "iconPath": "icons/compass.png",

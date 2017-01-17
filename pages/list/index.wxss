@@ -1,23 +1,47 @@
 /* pages/list/index.wxss */
 .job-panel {
-    margin: 40rpx;
-    border-radius: 8rpx;
-    font-size: 32rpx;
-    background: #efefef
+  margin: 40rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  background: #efefef
 }
+
 .job-name {
-    padding: 10rpx;
-    border-top-left-radius: 8rpx;
-    border-top-right-radius: 8rpx;
-    text-align: center;
-    background: lightgrey
+  padding: 10rpx;
+  border-top-left-radius: 8rpx;
+  border-top-right-radius: 8rpx;
+  text-align: center;
+  background: lightgrey
 }
+
 .job-address {
-    padding: 10rpx;
+  padding: 10rpx;
 }
+
 .job-e-address {
-    padding: 10rpx;
+  padding: 10rpx;
 }
+
 .job-description {
-    padding: 10rpx;
+  padding: 10rpx;
+}
+
+.job-edit {
+  border-top: 1rpx solid lightgrey;
+}
+
+.job-edit__button {
+  display: inline-block;
+  width: 50%;
+}
+
+.job-edit__button button {
+  width: 90%;
+  height: 80rpx;
+  margin: 10rpx auto;
+  font-size: 32rpx
+}
+
+.job-create__button {
+  margin: 40rpx;
 }

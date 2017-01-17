@@ -1,9 +1,21 @@
 <!--pages/list/index.wxml-->
-<view wx:for="{{jobs}}" class="job-panel">
-  <view class="">
+<view>
+  <view wx:for="{{jobs}}" class="job-panel">
     <view class="job-name">{{item.jobName}}</view>
     <view class="job-address">address: {{item.address}}</view>
     <view class="job-e-address">expected address: {{item.expectedAddress}}</view>
     <view class="job-description">{{item.description}}</view>
+    <view class="job-edit">
+      <view class="job-edit__button">
+        <button type="primary">Edit</button>
+      </view>
+      <view class="job-edit__button">
+        <button type="default">Delete</button>
+      </view>
+    </view>
+  </view>
+  <view class="job-create__button">
+    <button bindtap="goToPositionPage" type="primary">Create a new position</button>
   </view>
 </view>
+
