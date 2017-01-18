@@ -1,6 +1,6 @@
 <!--pages/list/index.wxml-->
 <view>
-  <view wx:for="{{jobs}}" class="job-panel">
+  <view wx:for="{{jobs}}" wx:key="{{index}}" class="job-panel">
     <view class="job-name">{{item.jobName}}</view>
     <view class="job-address">address: {{item.address}}</view>
     <view class="job-e-address">expected address: {{item.expectedAddress}}</view>

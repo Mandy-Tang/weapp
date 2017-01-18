@@ -28,7 +28,7 @@ Page({
   data:{
     jobs: [],
   },
-  onLoad: function(options) {
+  onShow: function (options) {
     getJobs().then((jobs) => {
       this.setData({jobs})
     });

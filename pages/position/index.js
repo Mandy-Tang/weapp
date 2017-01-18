@@ -56,14 +56,14 @@ Page({
     if (this.data.id) {
       const id = this.data.id
       updateJob(Object.assign({}, value, {id})).then(() => {
-        wx.switchTab({
-          url: '../list/index',
+        wx.navigateBack({
+          delta: 1,
         })
       })
     } else {
       createJob(value).then(() => {
-        wx.switchTab({
-          url: '../list/index',
+        wx.navigateBack({
+          delta: 1,
         })
       });
     }
