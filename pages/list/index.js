@@ -1,5 +1,6 @@
 // pages/list/index.js
-import { getJobs, deleteJob } from '../../utils/jobs';
+let app = getApp();
+
 const goToPositionPage = () => {
   // remain the current page and navigate to another page which is not in the tabBar
   wx.navigateTo({
@@ -7,18 +8,18 @@ const goToPositionPage = () => {
   })
 }
 
-const goToUpdateJob = (e) => {
+const goToUpdatePosition = (e) => {
   wx.navigateTo({
     url: `../position/index?id=${e.target.dataset.id}`
   })
 }
 
-const goToDeleteJob = (e) => {
+const goToDeletePosition = (e) => {
   wx.showModal({
     title: '确定删除内推职位',
     success: function(res) {
       if (res.confirm) {
-        deleteJob(e.target.dataset.id); 
+        app.positionsRef.child(e.target.dataset.id).remove()
       }
     }
   })
@@ -26,14 +27,12 @@ const goToDeleteJob = (e) => {
 
 Page({
   data:{
-    jobs: [],
+    positions: []
   },
-  onShow: function (options) {
-    getJobs().then((jobs) => {
-      this.setData({jobs})
-    });
+  onLoad: function () {
+    app.positionsRef.bindAsArray(this, 'positions');
   },
   goToPositionPage,
-  goToUpdateJob,
-  goToDeleteJob
+  goToUpdatePosition,
+  goToDeletePosition
 })

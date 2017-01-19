@@ -1,20 +1,19 @@
 <!--pages/list/index.wxml-->
 <view>
-  <view wx:for="{{jobs}}" wx:key="{{index}}" class="job-panel">
-    <view class="job-name">{{item.jobName}}</view>
-    <view class="job-address">address: {{item.address}}</view>
-    <view class="job-e-address">expected address: {{item.expectedAddress}}</view>
-    <view class="job-description">{{item.description}}</view>
-    <view class="job-edit">
-      <view class="job-edit__button">
-        <button type="primary" data-id="{{item.id}}" bindtap="goToUpdateJob">Edit</button>
+  <view wx:for="{{positions}}" wx:key="{{index}}" class="position-panel">
+    <view class="position-name">{{item[".value"].name}}</view>
+    <view class="position-address">{{item[".value"].address}}</view>
+    <view class="position-description">{{item[".value"].description}}</view>
+    <view class="position-edit">
+      <view class="position-edit__button">
+        <button type="primary" data-id="{{item['.key']}}" bindtap="goToUpdatePosition">Edit</button>
       </view>
-      <view class="job-edit__button">
-        <button type="default" data-id="{{item.id}}" bindtap="goToDeleteJob">Delete</button>
+      <view class="position-edit__button">
+        <button type="default" data-id="{{item['.key']}}" bindtap="goToDeletePosition">Delete</button>
       </view>
     </view>
   </view>
-  <view class="job-create__button">
+  <view class="position-create__button">
     <button bindtap="goToPositionPage" type="primary">Create a new position</button>
   </view>
 </view>

@@ -1,8 +1,7 @@
 <!--pages/position/index.wxml-->
 <form bindsubmit="onSubmit">
-  <view wx:for="{{fields}}" wx:key="{{index}}">
-    <input wx:if="{{item.tag === 'input'}}" placeholder="{{item.placeholder}}" name="{{item.name}}" value="{{job[item.name]}}"/>
-    <textarea wx:if="{{item.tag === 'textarea'}}" placeholder="{{item.placeholder}}" name="{{item.name}}"  value="{{job[item.name]}}"></textarea>
-  </view>
+  <input placeholder="Position Name" name="name" value="{{position['.value'].name}}"/>
+  <input placeholder="Address" name="address" value="{{position['.value'].address}}"/>
+  <textarea placeholder="Description" value="{{position['.value'].description}}" name="description"/>
   <button form-type="submit">{{submitText}}</button>
 </form>

@@ -1,71 +1,46 @@
 // pages/position/index.js
-import { createJob, getJob, updateJob } from '../../utils/jobs';
-const fields = [
-  {
-    name: 'jobName',
-    tag: 'input',
-    placeholder: 'Position Name'
-  },
-  {
-    name: 'address',
-    tag: 'input',
-    placeholder: 'Your Address'
-  },
-  {
-    name: 'expectedAddress',
-    tag: 'input',
-    placeholder: 'Prefferd Address'
-  },
-  {
-    name: 'description',
-    tag: 'textarea',
-    placeholder: 'Job Description'
-  }
-]
+let app = getApp();
+
 Page({
   data:{
-    fields: fields,
     id: null,
-    job: {},
+    position: {},
     submitText: ''
   },
-  onLoad: function (options) {
-    this.setData({id: options.id});
-    if (this.data.id) { // Update job
-      getJob(this.data.id).then((job) => {
-        this.setData({job})
-      });
-      this.setData({submitText: 'Update Position'});
-    } else { // create job
-      this.setData({submitText: 'Create Position'})
+  onLoad: function (query) {
+    const id = query.id;
+    this.setData({id: id});
+    if (typeof id != 'undefined') { // Update the selected position
+      this.setData({submitText: '修改'});
+      app.positionsRef.child(`${id}`).bindAsObject(this, 'position');
+    } else { // create a new position
+      this.setData({submitText: '新建'})
     }
   },
   onReady: function () {
-    if (this.data.id) {
+    if (typeof this.data.id != 'undefined') {
       wx.setNavigationBarTitle({
         title: '修改职位信息',
       });
     } else {
       wx.setNavigationBarTitle({
-        title: '创建内推表单',
+        title: '新建内推职位',
       });
     }
   },
   onSubmit: function (e) {
     const value = e.detail.value;
-    if (this.data.id) {
-      const id = this.data.id
-      updateJob(Object.assign({}, value, {id})).then(() => {
-        wx.navigateBack({
-          delta: 1,
-        })
-      })
-    } else {
-      createJob(value).then(() => {
-        wx.navigateBack({
-          delta: 1,
-        })
+    const id = this.data.id;
+    if (typeof id != 'undefined') {
+      app.positionsRef.update({
+        [id]: value 
+      }).then(() => {
+          wx.navigateBack();
       });
+    } else {
+      app.positionsRef.push(value).then(() => {
+        wx.navigateBack();
+      })
     }
   }
 })

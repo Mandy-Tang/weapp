@@ -1,12 +1,12 @@
 /* pages/list/index.wxss */
-.job-panel {
+.position-panel {
   margin: 40rpx;
   border-radius: 8rpx;
   font-size: 32rpx;
   background: #efefef
 }
 
-.job-name {
+.position-name {
   padding: 10rpx;
   border-top-left-radius: 8rpx;
   border-top-right-radius: 8rpx;
@@ -14,34 +14,34 @@
   background: lightgrey
 }
 
-.job-address {
+.position-address {
   padding: 10rpx;
 }
 
-.job-e-address {
+.position-e-address {
   padding: 10rpx;
 }
 
-.job-description {
+.position-description {
   padding: 10rpx;
 }
 
-.job-edit {
+.position-edit {
   border-top: 1rpx solid lightgrey;
 }
 
-.job-edit__button {
+.position-edit__button {
   display: inline-block;
   width: 50%;
 }
 
-.job-edit__button button {
+.position-edit__button button {
   width: 90%;
   height: 80rpx;
   margin: 10rpx auto;
   font-size: 32rpx
 }
 
-.job-create__button {
+.position-create__button {
   margin: 40rpx;
 }

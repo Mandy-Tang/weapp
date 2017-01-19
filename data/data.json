@@ -1,0 +1,19 @@
+{
+  "positions": [
+    {
+      "name": "UI DEV",
+      "address": "Chengdu",
+      "description": "AngularJS, Reactive, Grunt, NodeJS, CSS, HTML, jQuery"
+    },
+    {
+      "name": "JAVA DEV",
+      "address": "Chengdu",
+      "description": "3 years experience in java developing"
+    },
+    {
+      "name": "TEST",
+      "address": "Chengdu",
+      "description": "3 years experience in auto-testing"
+    }
+  ]
+}

@@ -1,6 +1,16 @@
 //app.js
+import wilddog from './utils/wilddog-weapp-all';
+
+const config = {
+  syncURL: 'https://tm-weapp.wilddogio.com',
+  authDomain: 'tm-weapp.wilddogio.com'
+};
+
 App({
   onLaunch: function () {
+    wilddog.initializeApp(config);
+    this.positionsRef = wilddog.sync().ref('positions');
+
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
