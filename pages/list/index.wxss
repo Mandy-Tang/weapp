@@ -18,30 +18,33 @@
   padding: 10rpx;
 }
 
-.position-e-address {
-  padding: 10rpx;
-}
-
 .position-description {
   padding: 10rpx;
 }
 
-.position-edit {
+.position-operation, .position-apply {
   border-top: 1rpx solid lightgrey;
 }
 
-.position-edit__button {
+.position-operation__button-wrapper {
   display: inline-block;
-  width: 50%;
+  width: 50%
+}
+.position-apply__button-wrapper {
+  display: inline-block;
+  width: 100%;
 }
 
-.position-edit__button button {
-  width: 90%;
-  height: 80rpx;
+.position-operation button,
+.position-apply button
+ {
+  width: 200rpx;
   margin: 10rpx auto;
-  font-size: 32rpx
+  font-size: 32rpx;
+  line-height: 64rpx;
 }
 
 .position-create__button {
   margin: 40rpx;
+  font-size: 32rpx;
 }

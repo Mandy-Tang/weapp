@@ -1,20 +1,25 @@
 <!--pages/list/index.wxml-->
 <view>
+  <view wx:if="{{role ==='HR'}}"class="position-create__button">
+    <button bindtap="goToPositionPage" type="primary">Create a new position</button>
+  </view>
   <view wx:for="{{positions}}" wx:key="{{index}}" class="position-panel">
     <view class="position-name">{{item[".value"].name}}</view>
     <view class="position-address">{{item[".value"].address}}</view>
     <view class="position-description">{{item[".value"].description}}</view>
-    <view class="position-edit">
-      <view class="position-edit__button">
+    <view wx:if="{{role === 'HR'}}"class="position-operation">
+      <view class="position-operation__button-wrapper">
         <button type="primary" data-id="{{item['.key']}}" bindtap="goToUpdatePosition">Edit</button>
       </view>
-      <view class="position-edit__button">
+      <view class="position-operation__button-wrapper">
         <button type="default" data-id="{{item['.key']}}" bindtap="goToDeletePosition">Delete</button>
       </view>
     </view>
-  </view>
-  <view class="position-create__button">
-    <button bindtap="goToPositionPage" type="primary">Create a new position</button>
+    <view wx:else class="position-apply">
+      <view class="position-apply__button-wrapper">
+        <button type="primary" data-id="{{item['.key']}}" bindtap="goToApplyPage">Apply</button>  
+      </view>
+    </view>
   </view>
 </view>
 

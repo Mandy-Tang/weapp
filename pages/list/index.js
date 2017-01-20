@@ -31,6 +31,8 @@ Page({
   },
   onLoad: function () {
     app.positionsRef.bindAsArray(this, 'positions');
+    const role = wx.getStorageSync('role');
+    this.setData({role});
   },
   goToPositionPage,
   goToUpdatePosition,
