@@ -25,6 +25,12 @@ const goToDeletePosition = (e) => {
   })
 }
 
+const goToApplyPage = (e) => {
+  wx.navigateTo({
+    url: `../apply/index?id=${e.target.dataset.id}`
+  })
+}
+
 Page({
   data:{
     positions: []
@@ -36,5 +42,6 @@ Page({
   },
   goToPositionPage,
   goToUpdatePosition,
-  goToDeletePosition
+  goToDeletePosition,
+  goToApplyPage
 })

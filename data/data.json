@@ -15,5 +15,25 @@
       "address": "Chengdu",
       "description": "3 years experience in auto-testing"
     }
+  ],
+  "candidates": [
+    {
+      "name": "张三",
+      "telephone": "17761222222",
+      "email": "ddfdfda@qq.com",
+      "referee": "李四"
+    },
+    {
+      "name": "李四",
+      "telephone": "17761222222",
+      "email": "ddfdfda@qq.com",
+      "referee": "李四"
+    },
+    {
+      "name": "王五",
+      "telephone": "17761222222",
+      "email": "ddfdfda@qq.com",
+      "referee": "李四"
+    }
   ]
 }

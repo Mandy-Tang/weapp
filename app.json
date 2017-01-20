@@ -33,12 +33,6 @@
       "selectedIconPath": "icons/compass_green.png"
     },
     {
-      "pagePath": "pages/apply/index",
-      "text": "Apply",
-      "iconPath": "icons/heart.png",
-      "selectedIconPath": "icons/heart_green.png"
-    },
-    {
       "pagePath": "pages/profile/index",
       "text": "Profile",
       "iconPath": "icons/person.png",
