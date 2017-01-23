@@ -2,8 +2,8 @@
   "pages":[
     "pages/list/index",
     "pages/position/index",
-    "pages/explore/index",
     "pages/apply/index",
+    "pages/explore/index",
     "pages/profile/index"
   ],
   "window":{

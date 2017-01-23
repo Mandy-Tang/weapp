@@ -22,6 +22,7 @@ Page({
       })
       setTimeout(() => {
         wx.hideToast();
+        wx.navigateBack();
       }, 2000)
     }).catch((err) => {
       wx.showToast({

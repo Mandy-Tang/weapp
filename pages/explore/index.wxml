@@ -1,2 +1,13 @@
-<!--pages/explore/index.wxml-->
-<text>pages/explore/index.wxml</text>
+<!--pages/candidates/index.wxml-->
+<!--pages/list/index.wxml-->
+<view>
+  <view wx:for="{{candidates}}" wx:key="{{index}}" class="candidate-panel">
+    <view class="candidate-name">姓名：{{item[".value"].name}}</view>
+    <view class="candidate-email">email：{{item[".value"].email}}</view>
+    <view class="candidate-tel">手机：{{item[".value"].tel}}</view>
+    <view class="candidate-position">申请职位：{{item[".value"].position.name}}</view>
+    <view class="candidate-referee">推荐人：{{item[".value"].referee}}</view>
+  </view>
+</view>
+
+
